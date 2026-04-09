@@ -4,10 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.hundredz.mapper.OperateLogMapper;
 import com.hundredz.pojo.OperateLog;
-<<<<<<< HEAD
+
 import com.hundredz.utils.CurrentHolder;
-=======
->>>>>>> befb783f2ea6acee673c5b65508aad7c715ea16b
+
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -110,12 +109,9 @@ public class OperateLogAspect {
 
     }
     private Integer getCurrentUserId() {
-<<<<<<< HEAD
+
 
         return CurrentHolder.getCurrentId();
-=======
-        // 这里应该根据实际情况从认证信息中获取当前登录用户的ID
-        return 1; // 示例返回值
->>>>>>> befb783f2ea6acee673c5b65508aad7c715ea16b
+
     }
 }
