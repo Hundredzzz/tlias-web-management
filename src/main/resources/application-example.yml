@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: tlias-web-management
+
+  # 配置数据库的连接信息
+  datasource:
+    url: jdbc:mysql://localhost:3306/your_database
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: your_username
+    password: your_password
+
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true  # 开启驼峰命名
+  mapper-locations: classpath:com/hundredz/mapper/*.xml
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
+
+aliyun:
+  oss:
+    endpoint: your_aliyunoss_endpoint
+    bucketName: your_aliyunoss_bucketName
+    region: your_aliyunoss_region
+
